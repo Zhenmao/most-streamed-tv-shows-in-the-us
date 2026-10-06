@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: currentColor;
+}
+
+:root {
+  --font-size-5xl: 3.815rem;
+  --font-size-4xl: 3.052rem;
+  --font-size-3xl: 2.441rem;
+  --font-size-2xl: 1.953rem;
+  --font-size-xl: 1.563rem;
+  --font-size-lg: 1.25rem;
+  --font-size-md: 1rem;
+  --font-size-sm: 0.8rem;
+
+  --font-family: "Sofia Sans Condensed", sans-serif;
+
+  --font-weight-body: 500;
+  --font-weight-heading: 800;
+
+  --line-height-title: 1;
+  --line-height-body: 1.5;
+
+  --color-background: #f2f2f2;
+  --color-text: #1e1e1c;
+  --color-accent: #cef30a;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-title);
+}
+
+main {
+  margin-block: 4rem;
+}
+
+article {
+  margin-inline: 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+h1,
+footer {
+  margin-inline: auto;
+}
+
+h1 {
+  padding: 0.125em 0.25em;
+  background-color: var(--color-accent);
+}
+
+.bump-chart {
+  overflow-x: auto;
+  font-size: var(--font-size-md);
+  display: flex;
+}
+
+.bump-chart svg {
+  flex-shrink: 0;
+  display: block;
+}
+
+.bump-chart text {
+  fill: currentColor;
+}
+
+.bump-chart .ranks-container {
+  position: sticky;
+  z-index: 1;
+  background-color: var(--color-background);
+}
+
+.bump-chart .ranks-container[data-side="left"] {
+  left: 0;
+}
+
+.bump-chart .ranks-container[data-side="right"] {
+  right: 0;
+}
+
+.bump-chart .link__fill,
+.bump-chart .link__cover {
+  stroke: var(--color-background);
+}
+
+.bump-chart .link__stroke {
+  stroke: var(--color-text);
+}
+
+.bump-chart .node__eyebrow {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-title);
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+}
+
+.bump-chart .node__title {
+  font-size: var(--font-size-lg);
+}
+
+.bump-chart .bar__cover {
+  fill: var(--color-background);
+}
+
+.bump-chart .bar__fill {
+  fill: var(--color-accent);
+}
+
+.bump-chart .bar__track {
+  fill: none;
+  stroke: var(--color-text);
+}
+
+html,
+.bump-chart {
+  --scrollbar-color-thumb: var(--color-text);
+  --scrollbar-color-track: var(--color-accent);
+  --scrollbar-width: auto;
+  scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
+  scrollbar-width: var(--scrollbar-width);
+}
